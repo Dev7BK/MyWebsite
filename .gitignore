@@ -1,0 +1,49 @@
+# ---------------------------
+# 📦 Node.js / npm
+# ---------------------------
+node_modules/
+dist/
+.temp/
+.temp_dir/
+.npm/
+.package-lock.json
+
+# ---------------------------
+# ⚙️ Vite
+# ---------------------------
+.vite/
+.vite-cache/
+*.local
+
+# ---------------------------
+# 🧑‍💻 TypeScript
+# ---------------------------
+*.tsbuildinfo
+
+# ---------------------------
+# 🎨 Tailwind CSS
+# ---------------------------
+tailwind.config.js
+tailwind.config.ts
+.postcssrc.js
+.postcssrc.ts
+
+# ---------------------------
+# 🛠️ Visual Studio Code
+# ---------------------------
+.vscode/
+*.code-workspace
+
+# ---------------------------
+# 💻 OS-spezifisch
+# ---------------------------
+.DS_Store
+Thumbs.db
+
+# ---------------------------
+# 📄 Output / Build / Caches
+# ---------------------------
+build/
+coverage/
+*.cache
+*.tmp
