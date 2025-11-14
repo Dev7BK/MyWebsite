@@ -1,3 +1,16 @@
+html.light {
+  --bg: #ffffff;
+  --fg: #213547;
+  background-color: var(--bg);
+  color: var(--fg);
+}
+html.dark {
+  --bg: #242424;
+  --fg: rgba(255, 255, 255, 0.87);
+  background-color: var(--bg);
+  color: var(--fg);
+}
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

@@ -1,0 +1,218 @@
+// CSS Variables
+:root {
+  --nav-bg: #121212;
+  --nav-border: #2e2e2e;
+  --color-heading: #ffffff;
+  --color-body: #d1d5db;
+  --color-brand: #2563eb;
+  --color-brand-hover: #1d4ed8;
+  --color-brand-light: #60a5fa;
+  --bg-hover: #2b2b2b;
+  --bg-soft: #1e1e1e;
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+// Navigation
+.site-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 20;
+  background: var(--nav-bg);
+  border-bottom: 1px solid var(--nav-border);
+}
+
+.nav-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// Brand (Logo links)
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: inherit;
+  order: 1;
+
+  &__logo {
+    height: 2rem;
+    width: auto;
+  }
+
+  &__title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-heading);
+    white-space: nowrap;
+  }
+}
+
+// Actions
+.nav-actions {
+  display: inline-flex;
+  gap: 0.75rem;
+  order: 3;
+
+  @media (min-width: 768px) {
+    gap: 0;
+  }
+}
+
+// CTA Button
+.btn-cta {
+  background: var(--color-brand);
+  color: white;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  box-shadow: var(--shadow-xs);
+  cursor: pointer;
+  transition: background 0.2s;
+
+  &:hover {
+    background: var(--color-brand-hover);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.35);
+  }
+}
+
+// Menu Toggle
+.btn-menu-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0.5rem;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  color: var(--color-body);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+
+  &:hover {
+    background: var(--bg-soft);
+    color: var(--color-heading);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--bg-hover);
+  }
+
+  &__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+// Menu Wrapper
+.nav-menu-wrapper {
+  display: none;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  order: 2;
+
+  @media (min-width: 768px) {
+    display: flex;
+    width: auto;
+  }
+}
+
+// Menu
+.nav-menu {
+  list-style: none;
+  margin: 0;
+  padding: 1rem;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-soft);
+  border: 1px solid var(--nav-border);
+  border-radius: 8px;
+  font-weight: 500;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    gap: 2rem;
+    padding: 0;
+    margin-top: 0;
+    background: transparent;
+    border: none;
+  }
+
+  &__item {
+    margin: 0;
+  }
+
+  &__link {
+    display: block;
+    padding: 0.5rem 0.75rem;
+    color: var(--color-heading);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.2s, color 0.2s;
+
+    @media (min-width: 768px) {
+      padding: 0;
+    }
+
+    &:hover {
+      background: var(--bg-hover);
+
+      @media (min-width: 768px) {
+        background: transparent;
+        color: var(--color-brand-light);
+      }
+    }
+
+    &--active {
+      background: var(--color-brand);
+      color: white;
+
+      @media (min-width: 768px) {
+        background: transparent;
+        color: var(--color-brand-light);
+      }
+    }
+  }
+}
+
+// Screen Reader Only
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
