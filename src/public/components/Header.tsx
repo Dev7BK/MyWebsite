@@ -1,7 +1,16 @@
 import placeHolder from "assets/placeholder.svg";
+import instaIcon from "assets/instagram.svg";
 import "../scss/header.scss";
 
 const Header = () => {
+  const openInNewTab = (
+    url: string,
+    event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+  ) => {
+    event.preventDefault();
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
+
   return (
     <div className="header-wrapper">
       <nav className="site-nav">
@@ -50,12 +59,12 @@ const Header = () => {
                 </a>
               </li>
               <li className="nav-menu__item">
-                <a href="/#about" className="nav-menu__link">
+                <a href="/#about-me" className="nav-menu__link">
                   Über mich
                 </a>
               </li>
               <li className="nav-menu__item">
-                <a href="/#services" className="nav-menu__link">
+                <a href="/#music" className="nav-menu__link">
                   Music
                 </a>
               </li>
@@ -66,10 +75,15 @@ const Header = () => {
               </li>
               <li className="nav-menu__item">
                 <a
-                  href="https://www.instagram.com/bilal.krl7"
                   className="nav-menu__link"
+                  href="/instagram"
+                  onClick={(
+                    event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+                  ) =>
+                    openInNewTab("https://www.instagram.com/bilal.krl7", event)
+                  }
                 >
-                  <img className="icon" src={placeHolder} alt="Instagram" />
+                  <img className="icon" src={instaIcon} alt="Instagram" />
                 </a>
               </li>
             </ul>
