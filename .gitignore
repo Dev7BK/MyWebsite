@@ -43,13 +43,14 @@ coverage/
 .temp_dir/
 
 # ---------------------------
-# 🔐 Secrets
+# 🔐 Environment Variables
 # ---------------------------
-src/secrets.ts
 .env
 .env.local
+.env.*.local
 .env.*
 !.env.example
+src/secrets.ts
 
 # ---------------------------
 # 🐍 Python
