@@ -17,6 +17,13 @@
   height: 24px;
 }
 
+// Header Wrapper
+.header-wrapper {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 // Navigation
 .site-nav {
   position: fixed;
@@ -109,7 +116,9 @@
   border-radius: 8px;
   color: var(--color-body);
   cursor: pointer;
-  transition: background 0.2s, color 0.2s;
+  transition:
+    background 0.2s,
+    color 0.2s;
 
   @media (min-width: 768px) {
     display: none;
@@ -177,7 +186,9 @@
     color: var(--color-heading);
     text-decoration: none;
     border-radius: 8px;
-    transition: background 0.2s, color 0.2s;
+    transition:
+      background 0.2s,
+      color 0.2s;
 
     @media (min-width: 768px) {
       padding: 0;

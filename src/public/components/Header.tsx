@@ -5,7 +5,7 @@ import "../scss/header.scss";
 const Header = () => {
   const openInNewTab = (
     url: string,
-    event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+    event: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
   ) => {
     event.preventDefault();
     window.open(url, "_blank", "noopener,noreferrer");
@@ -60,7 +60,7 @@ const Header = () => {
               </li>
               <li className="nav-menu__item">
                 <a href="/#about-me" className="nav-menu__link">
-                  Über mich
+                  About me
                 </a>
               </li>
               <li className="nav-menu__item">
@@ -70,7 +70,7 @@ const Header = () => {
               </li>
               <li className="nav-menu__item">
                 <a href="/#contact" className="nav-menu__link">
-                  Kontakt
+                  Contact
                 </a>
               </li>
               <li className="nav-menu__item">
@@ -78,7 +78,7 @@ const Header = () => {
                   className="nav-menu__link"
                   href="/instagram"
                   onClick={(
-                    event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+                    event: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
                   ) =>
                     openInNewTab("https://www.instagram.com/bilal.krl7", event)
                   }
